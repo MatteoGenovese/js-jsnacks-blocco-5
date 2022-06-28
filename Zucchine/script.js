@@ -59,17 +59,29 @@ zucchine = [
 ]
 
 zucchineCorte = [];
-zucchineLunghe = []
+pesoZucchineCorte = 0;
+zucchineLunghe = [];
+pesoZucchineLunghe = 0;
 
 let pesoTot = 0
 for (let zucchina in zucchine) {
-    if (zucchine[zucchina].lunghezza > 15)
+    if (zucchine[zucchina].lunghezza > 15) {
         zucchineLunghe.push(zucchine[zucchina].lunghezza);
-    else
+        pesoZucchineLunghe = pesoZucchineLunghe + zucchine[zucchina].peso;
+    } else {
         zucchineCorte.push(zucchine[zucchina].lunghezza);
+        pesoZucchineCorte = pesoZucchineCorte + zucchine[zucchina].peso;
+    }
 
 }
 
 
-console.log(zucchineLunghe);
-console.log(zucchineCorte);
+console.log(`
+Zucchine lunghe
+Lunghezze = ${zucchineLunghe} 
+peso = ${pesoZucchineLunghe}`);
+
+console.log(`
+Zucchine corte
+Lunghezze = ${zucchineCorte} 
+peso = ${pesoZucchineCorte}`);
