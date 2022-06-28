@@ -1,3 +1,9 @@
+/* 
+ * Crea 10 oggetti che rappresentano un peperone, 
+ * indicandone per ognuno varietà, peso e lunghezza. 
+ * Calcola quanto pesano tutti i peperoni.
+ */
+
 peperoni = [
 
     {
